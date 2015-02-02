@@ -1,0 +1,76 @@
+@import 'settings';
+
+.team-score {
+  font-weight: bold;
+  background-color: $green;
+  color: $greenCream;
+  padding: 0.7em;
+
+  @include gridle(6);
+  .team-score--name {
+    text-align: center;
+    font-weight: bold;
+  }
+  .team-score--score {
+    text-align: center;
+    background-color: $greenCream;
+    color: $green;
+    width: 25%;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}
+
+.match-events {
+  @include gridle(12);
+  position: relative;
+  .localteam,
+  .visitorteam {
+    overflow: hidden;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 5%;
+      top: 42%;
+      padding-bottom: 5%;
+      background-color: orange;
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
+
+  .localteam {
+    @include gridle(12);
+    &:before { left: 0; }
+    // border-left: 1em solid $green;
+  }
+  .visitorteam {
+    @include gridle(12);
+    background-color: rgba(30,30,30,0.1);
+    &:before { right: 0; }
+    // border-right: 1em solid $green;
+  }
+
+  .event__minute {
+    text-align: center;
+    background-color: $green;
+    color: $greenCream;
+    width: 15%;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1em;
+  }
+}

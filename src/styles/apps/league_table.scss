@@ -1,0 +1,56 @@
+// league table
+
+$yellow: 255,196,60;
+$dark-yellow: '255,175,50';
+
+.league-table {
+  color: rgba(0,0,0,1);
+  background-color: $darkBlueGray;
+  overflow: hidden;
+  border: 1px solid $cream;
+
+
+  .form-indicator {
+    width: 20%;
+    height: 0.28em;
+    float: left;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
+
+    &.W { background-color: green; }
+    &.L { background-color: red; }
+    &.D { background-color: orange; }
+  }
+  .league-table--row {
+    @include gridle(12);
+    padding: 0.4em 1em;
+    text-align: center;
+
+    &.top {
+      // border-top: 2px solid rgba(30,30,30,0.4);
+      font-size: 1.1em;
+      font-weight: bold;
+      color: $cream;
+    }
+    &.bottom {
+      color: black;
+      box-shadow:
+        inset 0 1em -0.5em #333,
+        inset 0 -1em -0.5em #333;
+      background-color: $cream;
+    }
+
+    .league-table--row__position {
+      @include gridle(2);
+    }
+    .league-table--row__club {
+      @include gridle(8);
+      text-align: left;
+    }
+    .league-table--row__points {
+      @include gridle(2);
+    }
+    .league-table--row__one { @include gridle(1); }
+    .league-table--row__two { @include gridle(2); }
+  }
+}

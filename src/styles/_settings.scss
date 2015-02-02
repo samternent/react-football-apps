@@ -1,0 +1,24 @@
+@import "gridle/gridle";
+
+@include gridle_setup((
+  context: 12,
+  gutter-width: 0px,
+  direction: ltr
+));
+
+$darkBlueGray: rgb(65, 82, 96);
+$blueGray: rgb(85, 95, 107);
+$blueGrayButton: rgb(73, 82, 91);
+$blueGraySpeaker: rgb(62, 71, 82);
+$black: rgb(30, 30, 30);
+$cream: rgb(242, 235, 226);
+$lightGray: rgb(176, 176, 176);
+$lightestGray: rgb(218, 218, 218);
+$borderGray: rgb(98, 96, 93);
+$bodyColor: rgb(102,115,133);
+$green: rgb(77, 103, 75);
+$greenCream: rgb(229, 229, 197);
+
+
+
+$font-main: 'Josefin Slab' serif;
